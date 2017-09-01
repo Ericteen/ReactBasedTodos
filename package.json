@@ -17,6 +17,7 @@
     "react-scripts": "^1.0.2"
   },
   "dependencies": {
+    "normalizr": "^3.2.3",
     "prop-types": "^15.5.10",
     "react": "^15.5.0",
     "react-dom": "^15.5.0",
