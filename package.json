@@ -22,7 +22,9 @@
     "react-dom": "^15.5.0",
     "react-redux": "^5.0.5",
     "react-router": "^2.x.x",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
