@@ -1,4 +1,3 @@
-import { v4 } from 'node-uuid'
 import * as api from '../api'
 import { getIsFetching } from '../reducers'
 
@@ -16,7 +15,7 @@ export const fetchTodos = (filter) => (dispatch, getState) => {
   return api.fetchTodos(filter).then(
     response => {
       dispatch({
-        type: 'RECEIVE_TODOS_SUCCESS',
+        type: 'FETCH_TODOS_SUCCESS',
         filter,
         response
       })
@@ -31,11 +30,14 @@ export const fetchTodos = (filter) => (dispatch, getState) => {
   )
 }
 
-export const addTodo = (text) => ({
-  type: 'ADD_TODO',
-  id: v4(),
-  text
-})
+export const addTodo = (text) => (dispatch) => 
+  api.addTodo(text).then(response => {
+    dispatch({
+      type: 'ADD_TODO_SUCCESS',
+      response,
+    })
+  })
+
 // interpreted as an expression
 
 export const toggleTodo = (id) => ({
