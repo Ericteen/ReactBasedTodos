@@ -1,4 +1,4 @@
 {
-  "presets": ["es2015", "react"],
-  "plugins": ["transform-object-reset-spread"]
+    "presets": ["env", "react"],
+    "plugins": ["transform-object-reset-spread"]
 }
